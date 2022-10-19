@@ -279,14 +279,59 @@ Exemple :
 formaterDateFr('2018-02-23');
 </b></p>";
 
-$theDate    = new DateTime('2020-03-08');
-echo $stringDate = $theDate->format('Y-m-d H:i:s');
+function convertDate(){
+    setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);  // converti la langue
+    echo strftime("%A %e %B %Y", mktime(0, 0, 0, 02, 23, 2018));
+}    
+
+echo convertDate();
+
+// echo date('l \t\h\e jS');
+
+// $fmt = datefmt_create(
+//     'fr-FR',
+//     IntlDateFormatter::FULL,
+//     IntlDateFormatter::FULL,
+//     date_default_timezone_get(),
+//     IntlDateFormatter::GREGORIAN,
+//     'y F d'
+// );
+// echo 'date: ' . datefmt_format($fmt, 0);
+// $date = new DateTime('2000-01-01');
+// echo $date->format('Y-m-d H:i:s');
 
 
+// echo strftime('%A %d %B %Y'). '<br>';
+//echo strftime('%A %d %B %Y'). '<br>'; mercredi 19 octobre 2022
+
+// echo strftime('%x'). '<br>'; 19/10/2022
+// echo strftime('%T'). '<br>'; 11:41:27
+// echo strftime('%c'). '<br>';19/10/2022 11:41:27
 
 
+echo "<h1>EXERCICE 12</h1>";
+echo "<p><b>La fonction var_dump('$'variable) permet d’afficher les informations d’une variable. <br>
+Soit le tableau suivant :
+'$'tableauValeurs=array(true,'texte',10,25.369,array('valeur1','valeur2'));<br>
+A l’aide d’une boucle, afficher les informations des variables contenues dans le tableau.
+</b></p>";
 
 
+$tableau = [(true), "texte", 10, 25.369, ["valeur1", "valeur2"]];
+var_dump($tableau);
+
+echo "<h1>EXERCICE 13</h1>";
+echo "<p><b>Créer une classe Voiture possédant les propriétés suivantes :<br> marque, modèle, nbPortes et
+vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus
+des accesseurs (get) et mutateurs (set) traditionnels. La vitesse initiale de chaque véhicule
+instancié est de 0.<br> Une méthode personnalisée pourra afficher toutes les informations d’un
+véhicule.<br>
+v1 ➔ 'Peugeot","408',5
+v2 ➔ 'Citroën','C4',3<br>
+Coder l’ensemble des méthodes, accesseurs et mutateurs de la classe tout en réalisant des jeux de
+tests pour vérifier la cohérence de la classe Voiture. Vous devez afficher les tests et les éléments
+suivants :
+</b></p>";
 
 
 
