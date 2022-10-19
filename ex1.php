@@ -58,6 +58,9 @@ echo "<h1>EXERCICE 5</h1>";
 echo "<p><u>Ecrire un algorithme qui déclare une valeur en francs et qui la convertit en euros.
 Attention, la valeur générée devra être arrondie à 2 décimales.</u></p>";
 
+    
+    
+    
 $franc = 1;
 $euro = round($franc * 15.24, 2);
 echo "montant en euro : $franc <br>";
