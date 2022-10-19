@@ -267,11 +267,55 @@ Le formulaire devra également comporter un bouton permettant de le soumettre à
 de validation (submit)
 </b></p>";
 
-
-
-// require ("formulaire.php");
-// echo "fichier formulaire.php ";
-// $handle = fopen("c:\\laragon\\www\\AKGEDIK\\formulaire.php", "r");
-// echo $handle;
-?> 
+?>
 <a href="formulaire.php">Accéder au formulaire</a>
+<?php
+
+
+echo "<h1>EXERCICE 11</h1>";
+echo "<p><b>Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d’une
+chaîne de caractère représentant une date.
+Exemple :
+formaterDateFr('2018-02-23');
+</b></p>";
+
+$theDate    = new DateTime('2020-03-08');
+echo $stringDate = $theDate->format('Y-m-d H:i:s');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?> 
