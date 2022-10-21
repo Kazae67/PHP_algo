@@ -302,8 +302,26 @@ echo "<p><u>Créer une classe Personne (nom, prénom et date de naissance).
 Instancier 2 personnes et afficher leurs informations : nom, prénom et âge.
 </u></p>";
 
-$p1 = new Personne("DUPONT", "Michel", "1980-02-19");
-$p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
+require "Personne.php";
+$p1 = new Personne("DUPONT", "Michel", "1980-02-19"); // notre objet
+$p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");// notre objet
+
+
+//$p1->setNom("DUPONTDDDD<br>"); // on modifie le nom par (" ");
+echo $p1->getPrenom()." ".$p1->getNom()." a ".$p1->getAge()." ans<br>"; // on récupères dans require"personne.php" les attributs
+echo $p2->getPrenom()." ".$p2->getNom()." a ".$p2->getAge()." ans<br>"; //  on récupères dans require"personne.php" les attributs
+//echo $p1->getNom();
+//$p1->setNom("DUPONTDDDD<br>");
+//echo $p1->getNom();
+//echo $p1->getAge();
+
+// echo $p1->getBirthdate();
+echo $p1->getBirthdate();
+echo "<br>";
+$p1->setBirthdate("2020-08-08");
+echo $p1->getBirthdate();
+// $p1->setBirthdate("1954-05-05");
+// echo $p1->getBirthdate();
 
 ?>
 </html>

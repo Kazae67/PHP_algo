@@ -333,5 +333,10 @@ tests pour vérifier la cohérence de la classe Voiture. Vous devez afficher les
 suivants :
 </b></p>";
 
+require "Voiture.php";
+
+$v1 = new Voiture("Peugeot","408",5);
+$v2 = new Voiture("Citroën","C4",3);
+
 
 ?> 
