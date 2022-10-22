@@ -333,10 +333,39 @@ tests pour vérifier la cohérence de la classe Voiture. Vous devez afficher les
 suivants :
 </b></p>";
 
-require "Voiture.php";
+require "voiture.php";
 
 $v1 = new Voiture("Peugeot","408",5);
-$v2 = new Voiture("Citroën","C4",3);
+$v2 = new Voiture("Citroën","C4",3, 200);
+// var_dump($v1->getMarque());
+// var_dump($v1->getModele());
+// var_dump($v1->getNbPortes());
+// var_dump($v1->getVitesseActuelle());
+// var_dump($v1->getStatut());
 
+// GAME START ( ͡👁️ ͜ʖ ͡👁️)👍
+$v1->getDemarrer();
+$v1->setAccelerer(50);
+
+$v2->getDemarrer();
+$v2->getStopper();
+$v2->getDemarrer2();
+$v2->setAccelerer2(20);
+$v2->getStopper2();
+$v2->setAccelerer2(20);
+$v2->getDemarrer2();
+$v2->setAccelerer3(50);
+$v1->setAccelerer3(0);
+echo "<br>";
+// GAME OVER ( ͡👁️ ͜ʖ ͡👁️)🖕
+
+// INFOS VÉHICULE 1 🚗
+$v1->setStatut(1);
+$v1->setVitesseActuelle(50);
+echo $v1->getV1();
+echo "<br>";
+
+// INFO VÉHICULE 2 🚗
+echo $v2->getV2();
 
 ?> 
