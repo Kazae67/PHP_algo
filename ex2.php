@@ -2,7 +2,7 @@
 <title>ALGO 2 | Ex 1-15</title>
 <link rel="stylesheet" href="table.css">
 <?php
-$css = file_get_contents('/laragon/www/AKGEDIK/style.css');
+$css = file_get_contents('/laragon/www/AKGEDIK/PHP_algo/style.css');
 
 // EXERCICE 1
 echo "<h1>EXERCICE 1</h1>";
@@ -337,6 +337,7 @@ require "voiture.php";
 
 $v1 = new Voiture("Peugeot","408",5);
 $v2 = new Voiture("Citroën","C4",3, 200);
+
 // var_dump($v1->getMarque());
 // var_dump($v1->getModele());
 // var_dump($v1->getNbPortes());
@@ -357,7 +358,7 @@ $v2->getDemarrer2();
 $v2->setAccelerer3(50);
 $v1->setAccelerer3(0);
 echo "<br>";
-// GAME OVER ( ͡👁️ ͜ʖ ͡👁️)🖕
+// GAME OVER ( ͡👁️ ͜ʖ ͡👁️)👍
 
 // INFOS VÉHICULE 1 🚗
 $v1->setStatut(1);
@@ -366,6 +367,43 @@ echo $v1->getV1();
 echo "<br>";
 
 // INFO VÉHICULE 2 🚗
+$v2->getStopper2();
 echo $v2->getV2();
 
-?> 
+
+echo "<h1>EXERCICE 14</h1>";
+echo "<p><b>Créer une classe Voiture possédant 2 propriétés (marque et modèle) ainsi qu’une classe VoitureElec
+qui hérite (extends) de la classe Voiture et qui a une propriété supplémentaire (autonomie).<br>
+Instancier une voiture « classique » et une voiture « électrique » ayant les caractéristiques
+suivantes :<br>
+Peugeot 408 : €v1 = new Voiture('Peugeot','408');
+BMW i3 150 : €ve1 = new VoitureElec('BMW','I3',100);<br>
+Votre programme de test devra afficher les informations des 2 voitures de la façon suivante :<br>
+echo €v1->getInfos();<br>
+echo €ve1->getInfos();<br>
+</p></b>";
+
+
+$vl = new Voiture("Peugeot","408", 0);
+$vel = new VoitureElec("BMW","I3",100);
+
+echo $vl->getInfos();
+echo "<br>";
+echo $vel->getInfos();
+
+echo "<h1>EXERCICE 15</h1>";
+echo "<p><b>En utilisant les ressources de la page http://php.net/manual/fr/book.filter.php, vérifier si une
+adresse e-mail a le bon format
+</p></b>";
+
+
+$email = "elan@elan-formation.fr";
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  echo("$email est une adresse e-mail valide");
+} else {
+  echo("$email n'est pas une adresse e-mail valide");
+}
+
+?>
