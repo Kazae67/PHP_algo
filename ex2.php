@@ -168,7 +168,7 @@ count($elements);
 
 function alimenterListeDeroulante($elements){
 ?>
-<select">
+<select>
 <?php 
 foreach($elements as $key){
 ?>
@@ -205,8 +205,9 @@ function generalCheckbox($checkbox){
     foreach($checkbox as $key => $value){
             $form .="<input type='checkbox' $value> $key<br>";
         }
-        return $form;
         $form .= "</form>";
+        return $form;
+
 }    
 echo generalCheckbox($checkbox);
 
@@ -248,10 +249,11 @@ $sexe = [
 function afficherRadio($sexe){
     $form = "<form>";
     foreach($sexe as $key => $value){
-            $form .="<input type='radio' $value> $key<br>";
+            $form .="<input type='radio' name='radio' $value> $key<br>";
         }
-        return $form;
         $form .= "</form>";
+        return $form;
+
 }    
 echo afficherRadio($sexe);
 
@@ -343,6 +345,7 @@ $v2 = new Voiture("Citroën","C4",3, 200);
 // var_dump($v1->getNbPortes());
 // var_dump($v1->getVitesseActuelle());
 // var_dump($v1->getStatut());
+
 
 // GAME START ( ͡👁️ ͜ʖ ͡👁️)👍
 $v1->getDemarrer();
